@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+
+/* font-family: 'Barlow', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+
+:root{
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan-graphic-design-text: hsl(167, 40%, 24%);
+    --Dark-blue-photography-text: hsl(198, 62%, 26%);
+    --Dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --White-contact :hsla(0, 0%, 100%, .4);
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: url("images/desktop/image-header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu{
+    display: none;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-links > li > a{
+    text-decoration: none;
+    color: var(--White);
+    font-size: 1.5rem;
+    font-family: 'Barlow', sans-serif;
+    text-transform: capitalize;
+}
+
+.contact{
+    border: none;
+    background-color: var(--White);
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.contact:hover{
+    color: var(--White);
+    background-color: var(--White-contact);
+}
+
+.hero-arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title{
+    font-size: 2.75rem;
+    color: var(--White);
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.arrow-down{
+    width: 2.5rem;
+    height: 8rem;
+}
+
+.first-container{
+    display: grid;
+    grid-template-areas:
+    'brand transform'
+    'cup audience'
+    'design photog';
+}
+
+.card{
+    width: 100%;
+    height: 50rem;
+}
+
+.brand{
+    grid-area: brand;
+    padding: 8rem;
+}
+
+.sub-title{
+    font-size: 2.75rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    margin-bottom: 1.75rem;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.sub-title span{
+    display: block;
+}
+
+.card-para{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 90%;
+    font-family: 'Barlow', sans-serif;
+    font-weight:600 ;
+    color: var(--Dark-grayish-blue);
+}
+
+.learn-more{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.8rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+
+.brand .underline{
+    background-color: var(--Yellow);
+}
+
+.underline{
+    display: block;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 1rem;
+    border-radius: .5rem;
+    z-index: -1;
+}
+
+.audience .underline{
+    background-color: var(--Soft-red);
+}
+
+.transform{
+    grid-area: transform;
+    background: url('images/desktop/image-transform.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Yellow);
+}
+
+.sugar-cup{
+    grid-area: cup;
+    background: url('images/desktop/image-stand-out.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.audience{
+    grid-area: audience;
+    padding: 8rem;
+}
+
+.design{
+    grid-area: design;
+    background: url('images/desktop/image-graphic-design.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.design-box{
+    display: block;
+    width: 80%;
+    margin: 36rem auto 4rem;
+}
+
+.design-title{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Fraunces', serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+}
+
+.design-para{
+    font-size: 1.5rem;
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+
+.photograthy{
+    grid-area: photog;
+    background: url('images/desktop/image-photography.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.photog-title{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Fraunces', serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--Dark-blue-photography-text);
+}
+
+.photog-para{
+    font-size: 1.5rem;
+    color: var(--Dark-blue-photography-text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+
+.clients{
+    margin: 8rem 0;
+    text-align: center;
+}
+
+.clients-title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--Grayish-blue);
+    margin-bottom: 3rem;
+    font-family: 'Fraunces', serif;
+}
+
+.reviews-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    margin: 2rem 0;
+}
+
+.review-card{
+    flex: 1;
+    padding: 2rem 5rem;
+}
+
+.client-img{
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    margin: 2rem 0 1rem;
+}
+
+.review-para{
+    height: 8rem;
+    font-size: 1.2rem;
+    font-family: 'Barlow', sans-serif;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 600;
+    margin:3rem 0;
+}
+
+.client-name{
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 2rem;
+}
+
+.client-job{
+    font-size: 1.2rem;
+    color: var(--Grayish-blue);
+    font-weight: 600;
+}
+
+.images-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 30rem;
+}
+
+.milk-bottles{
+    background: url('images/desktop/image-gallery-milkbottles.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.orange{
+    background: url('images/desktop/image-gallery-orange.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.cone{
+    background: url('images/desktop/image-gallery-cone.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.sugar-cubes{
+    background: url('images/desktop/image-gallery-sugarcubes.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+footer{
+    background-color: var(--Dark-moderate-cyan-footer);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-logo{
+    font-size: 2.2rem;
+    font-family: 'Barlow', sans-serif;
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-weight: 600;
+    margin:2rem 0;
+}
+
+.footer-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.footer-links a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+}
+
+.footer-links a:hover{
+    color: var(--White);
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons > i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    transition: all .2s ease-in-out;
+}
+
+.social-icons > i:hover{
+    color: var(--White);
+}
+
+.attribution{
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    font-size: 1.5rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.attribution a{
+    color: var(--White);
+    text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+    header{
+        height: 80vh;
+        background: url('images/mobile/image-header.jpg');
+        background-position: center;
+        background-size: cover;
+        padding: 2rem 1rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .links-container{
+        position: absolute;
+        display: block;
+        right: 1rem;
+        left: 1rem;
+        top: 8rem;
+        height: 30rem;
+        background-color: var(--White);
+        padding: 2rem;
+        z-index: 10;
+        transition: all .2s ease-in-out;
+    }
+
+    .none{
+        display: none;
+    }
+
+    .links-container::before{
+        content: '';
+        position: absolute;
+        top: -2.9rem;
+        right: .1rem;
+        border-left: 3rem solid transparent;
+        border-right: .1rem solid var(--White);
+        border-bottom: 3rem solid var(--White);
+    }
+
+    .contact{
+        background-color: var(--Yellow);
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .nav-links{
+        display: block;
+        margin: 1rem 1rem 4rem;
+    }
+
+    .nav-links > li{
+        margin-bottom: 2rem;
+    }
+
+    .nav-links > li > a{
+        color: var(--Dark-grayish-blue);
+        font-size: 2rem;
+    }
+
+    .first-container{
+        grid-template-areas: 'transform'
+        'brand'
+        'cup'
+        'audience'
+        'design'
+        'photog';
+    }
+
+    .transform{
+        background: url('images/mobile/image-transform.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .sugar-cup{
+        background: url('images/mobile/image-stand-out.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .design{
+        background: url('images/mobile/image-graphic-design.jpg');
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .photograthy{
+        background-color: url('images/mobile/image-photography.jpg');
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .card-para{
+        width: 100%;
+    }
+
+    .brand, .audience{
+        padding: 8rem 4rem;
+    }
+
+    .reviews-box{
+        flex-direction: column;
+    }
+
+    .review-card{
+        padding: 0 1rem;
+    }
+
+    .images-container{
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+    }
+
+    .images-container > div{
+        height: 30rem;
+    }
+
+    .milk-bottles{
+        background: url('images/mobile/image-gallery-milkbottles.jpg');
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    .orange{
+        background: url('images/mobile/image-gallery-orange.jpg');
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    .cone{
+        background: url('images/mobile/image-gallery-cone.jpg');
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    .sugar-cubes{
+        background: url('images/mobile/image-gallery-sugar-cubes.jpg');
+        background-position: center;
+        background-size: 100% 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
